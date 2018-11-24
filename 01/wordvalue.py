@@ -3,21 +3,21 @@ from data import DICTIONARY, LETTER_SCORES
 def load_words():
     """Load dictionary into a list and return list"""
 
-    print "[Opening dictionary...]"
+    print("[Opening dictionary...]")
     dict_file = open(DICTIONARY, 'r')
 
-    print "[Reading dictionary...]"
+    print("[Reading dictionary...]")
     data = dict_file.read()
 
-    print "[Closing dictionary...]"
+    print("[Closing dictionary...]")
     dict_file.close()
 
-    print "[Formatting data...]"
+    print("[Formatting data...]")
     words = data.split('\n');
     # Get rid of last element (will be an empty string)
     words.pop()
 
-    print "[Done!]"
+    print("[Done!]")
     return words
 
 
@@ -51,6 +51,6 @@ def max_word_value(words = None):
 
 
 if __name__ == "__main__":
-    #pass # run unittests to validate
+    # run unittests to validate
     max_word = max_word_value()
-    print max_word, calc_word_value(max_word)
+    print(max_word, calc_word_value(max_word))
